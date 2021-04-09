@@ -237,7 +237,7 @@ double HX711::get_value(byte times) {
 }
 
 float HX711::get_units(byte times) {
-	return get_value(times) / SCALE;
+	return get_value(times) / HX711_SCALE;
 }
 
 void HX711::tare(byte times) {
@@ -246,11 +246,11 @@ void HX711::tare(byte times) {
 }
 
 void HX711::set_scale(float scale) {
-	SCALE = scale;
+	HX711_SCALE = scale;
 }
 
 float HX711::get_scale() {
-	return SCALE;
+	return HX711_SCALE;
 }
 
 void HX711::set_offset(long offset) {
